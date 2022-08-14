@@ -1,0 +1,30 @@
+{% extends 'Base.html' %}
+
+{% block title %}Bookings{% endblock title %}
+{%block body%}
+<div class ="container" style="padding-left: 19rem;
+padding-right: 19rem;
+padding-top: 5rem;">
+<table class="table">
+<thead>
+<tr>
+    <th scope="col">firstname</th>
+    <th scope="col">lastname</th>
+    <th scope="col">From</th>
+    <th scope="col">to</th>
+</tr>
+</thead>
+<tbody>
+{%for bookingi in booking%}
+<tr>
+    <td>{{bookingi.firstname}}</td>
+    <td>{{bookingi.lastname}}</td>
+    <td>{{bookingi.From}}</td>
+    <td>{{bookingi.to}}</td>
+</tr>
+{%endfor%}
+</tbody>
+</table>
+</div>
+{%endblock%}
+
